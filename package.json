@@ -1,0 +1,27 @@
+{
+  "name": "myapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sh ./scripts/build-protos.sh && vite",
+    "build": "sh ./scripts/build-protos.sh &&  vite build",
+    "preview": "sh ./scripts/build-protos.sh &&  vite preview",
+    "build-protos": "sh ./scripts/build-protos.sh",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.9.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "grpc-tools": "^1.12.4",
+    "svelte": "^4.0.3",
+    "svelte-check": "^3.4.4",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "@protobuf-ts/grpcweb-transport": "^2.9.0"
+  }
+}
